@@ -1,11 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet"/>
+    {% block title -%}
+    {% if Title %}
+    <title>{{Title}}</title>
+    {% else %}
+    <title>Добро пожаловать</title>
+    {% endif %}
+    {% endblock %}
 </head>
+
 <body>
-    
+    {% block content %}
+    <div class="clear"></div>
+    {% block mainmenu %}
+    <ul class="mainmenu">
+        {% for m in menu %}
+        <li><a href="{{m.url}}">{{m.name}}</a></li>
+        {% endfor %}
+    </ul>
+    {% endblock mainmenu %}
+    <div class="content">
+    {% if Title %}
+        <h1>{{Title}}</h1>
+        {% else %}
+        <h1>Про Flask</h1>
+        {% endif %}
+    </div>
+    {% endblock content %}
 </body>
+
 </html>
