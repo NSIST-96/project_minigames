@@ -3,9 +3,9 @@ from flask import Flask, render_template, request, flash, session, redirect, url
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'пф'
 
-menu = [{"name": "Домашняя страница", "url": "home.html"},
-        {"name": "CowClicker",        "url": "cowclicker.html"},
-        {"name": "Отзыв",             "url": "feedback.html"}]
+menu = [{"name": "Домашняя страница", "url": "home"},
+        {"name": "CowClicker",        "url": "cowclicker"},
+        {"name": "Отзыв",             "url": "feedback"}]
 
 @app.route("/")
 @app.route("/home")

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" href="{{ url_for('static', filename='css/styles.css')}}" rel="stylesheet"/>
-    {% block title -%}
+    <link type="text/css" href="{{ url_for('static', filename='css/style.css')}}" rel="stylesheet"/>
+    {% block title %}
     {% if Title %}
     <title>{{Title}}</title>
     {% else %}
@@ -28,7 +28,7 @@
     {% if Title %}
         <h1>{{Title}}</h1>
         {% else %}
-        <h1>Про Flask</h1>
+        <h1>Страница сайта</h1>
         {% endif %}
     </div>
     {% endblock content %}
