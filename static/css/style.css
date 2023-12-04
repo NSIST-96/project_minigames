@@ -62,6 +62,10 @@ ul.mainmenu li a:hover{
     font-size: 16px;
 }
 
+.home_top_info {
+    color: #21DB56;
+}
+
 .flash {padding: 10px;}
 
 .flash.success {

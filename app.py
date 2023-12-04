@@ -20,5 +20,9 @@ def cowclicker():
 def feedback():
     return render_template('feedback.html', menu=menu)
 
+@app.errorhandler(404)
+def pageNotFount(error):
+    return render_template('page404.html', title = "Старинца не найдена", menu=menu)
+
 if __name__ == "__main__":
     app.run(debug=True)
