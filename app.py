@@ -4,17 +4,21 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'пф'
 
 menu = [{"name": "Домашняя страница", "url": "home"},
-        {"name": "CowClicker",        "url": "cowclicker"},
+        {"name": "О нас",             "url": "about"},
         {"name": "Отзыв",             "url": "feedback"}]
 
 @app.route("/")
 @app.route("/home")
 def home():
-    return render_template('home.html', menu=menu) #все шаблоны по умолчанию берутся из templates/..
+        return render_template('home.html', menu=menu) #все шаблоны по умолчанию берутся из templates/..
+
+@app.route("/about")
+def about():
+        return render_template('about.html', menu=menu)
 
 @app.route("/cowclicker")
 def cowclicker():
-    return render_template('cowclicker.html', menu=menu)
+        return render_template('cowclicker.html', menu=menu)
 
 @app.route("/feedback", methods=["POST", "GET"])
 def feedback():
@@ -27,7 +31,7 @@ def feedback():
 
 @app.errorhandler(404)
 def pageNotFount(error):
-    return render_template('page404.html', title = "Старинца не найдена", menu=menu)
+        return render_template('page404.html', title = "Старинца не найдена", menu=menu)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+        app.run(debug=True)
