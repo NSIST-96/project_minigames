@@ -16,9 +16,14 @@ def home():
 def cowclicker():
     return render_template('cowclicker.html', menu=menu)
 
-@app.route("/feedback")
+@app.route("/feedback", methods=["POST", "GET"])
 def feedback():
-    return render_template('feedback.html', menu=menu)
+        if request.method == "POST":
+                if len(request.form['username']) > 2:
+                        flash('Сообщение отправено', category='success')
+                else:
+                        flash('Ошибка отправки', category='error')
+        return render_template('feedback.html',Title = "Обратная связь", menu=menu)
 
 @app.errorhandler(404)
 def pageNotFount(error):
