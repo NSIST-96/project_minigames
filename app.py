@@ -36,7 +36,7 @@ def feedback():
 @app.route("/profile")
 def profile():
         if (True):
-                return render_template('login.html')
+                return render_template('login.html', menu=menu)
         else:
                 return render_template('profile.html', menu=menu)
 
