@@ -16,7 +16,6 @@
 
 <body>
     {% block content %}
-    <div class="clear"></div>
     {% block mainmenu %}
     <ul class="mainmenu">
         {% for m in menu %}
@@ -31,5 +30,13 @@
     </div>
     {% endblock content %}
 </body>
+<footer>
+    {% block footer_info %}
+    <div class="footer_content">
+        <p>Сайт сделал <a href="#">Амелин А.С.</a></p>
+        <p>ИУК4-52Б</p>
+    </div>
+    {% endblock %}
+</footer>
 
 </html>

@@ -9,6 +9,8 @@ menu = [{"name": "Домашняя страница", "url": "home"},
         {"name": "Отзыв",             "url": "feedback"},
         {"name": "Профиль",           "url": "profile"}]
 
+
+
 @app.route("/")
 @app.route("/home")
 def home():
@@ -33,7 +35,10 @@ def feedback():
 
 @app.route("/profile")
 def profile():
-        return render_template('profile.html', menu=menu)
+        if (True):
+                return render_template('login.html')
+        else:
+                return render_template('profile.html', menu=menu)
 
 @app.route('/login',methods=["POST", "GET"])
 def login():
