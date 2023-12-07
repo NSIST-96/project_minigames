@@ -1,11 +1,13 @@
 from flask import Flask, render_template, request, flash, session, redirect, url_for, abort #Импортируем фласк и рендер шаблонов
+import database
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'пф'
 
 menu = [{"name": "Домашняя страница", "url": "home"},
         {"name": "О нас",             "url": "about"},
-        {"name": "Отзыв",             "url": "feedback"}]
+        {"name": "Отзыв",             "url": "feedback"},
+        {"name": "Профиль",           "url": "profile"}]
 
 @app.route("/")
 @app.route("/home")
@@ -28,6 +30,19 @@ def feedback():
                 else:
                         flash('Ошибка отправки', category='error')
         return render_template('feedback.html',Title = "Обратная связь", menu=menu)
+
+@app.route("/profile")
+def profile():
+        return render_template('profile.html', menu=menu)
+
+@app.route('/login',methods=["POST", "GET"])
+def login():
+    if 'userLogged' in session:
+        return redirect(url_for('profile', username=session['userLogged']))
+    elif request.method == "POST" and request.form['username'] == "selfedu" and request.form['psw'] == "123":
+        session['userLogged'] = request.form['username']
+        return redirect(url_for('profile', username=session['userLogged']))
+    return render_template('login.html', title="Авторизация", menu=menu)
 
 @app.errorhandler(404)
 def pageNotFount(error):
