@@ -2,33 +2,16 @@
 
 {% block content %}
 {{super()}}
-<div class="home_top_info">
-    <h1>Все игры:</h1>
-    <div class="home_games">
-        <div class="home_games_card home_games_tetris">
-            <img src="../static/img/tetris.png" alt="tetris">
-            <h4>Тетрис</h4>
-            <p>Цель: заработать как можно больше очков, складывая фигуры в линии, перед тем, как фигуры выйдут за пределы игрового поля.</p>
-            <button name="Play">Играть</button>
-        </div>
-        <div class="home_games_card home_games_snake">
-            <img src="../static/img/snake.png" alt="snake">
-            <h4>Змейка</h4>
-            <p>Цель: зарабатывать очки, поедая змейкой яблоки, заполняя собой всё поле, пока не врежишься в себя или стенку игрового поля.</p>
-            <button name="Play">Играть</button>
-        </div>
-        <div class="home_games_card home_games_labirint">
-            <img src="../static/img/labyrinth.jpg" alt="labyrinth">
-            <h4>Лабиринт</h4>
-            <p>Цель: пройти как можно больше лабиринтов за отведённое время, получая очки за нахождение коротких путей к выходу.</p>
-            <button name="Play">Играть</button>
-        </div>
-        <div class="home_games_card home_games_clicker">
-            <img src="../static/img/clicker.jpg" alt="clicker">
-            <h4>Кликер</h4>
-            <p>Цель: заработать как можно больше очков за отведённое время, кликая по объектам на экране.</p>
-            <button name="Play">Играть</button>
-        </div>
+<div class="home_top_news">
+    <!-- <img src="../static/img/news_background.jpg" alt="news"> -->
+    <div class="home_top_news_info">
+        <h1>Акция!!!</h1>
+        <h4>Удвоенные очки до конца дня в следующих играх:</h4>
+        <ul>
+            <li>• Змейка</li>
+            <li>• Кликер</li>
+            <li>• Тетрис</li>
+        </ul>
     </div>
 </div>
 {% endblock %}

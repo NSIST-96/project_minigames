@@ -5,6 +5,7 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'пф'
 
 menu = [{"name": "Домашняя страница", "url": "home"},
+        {"name": "Игры",              "url": "games"},
         {"name": "О нас",             "url": "about"},
         {"name": "Отзыв",             "url": "feedback"},
         {"name": "Профиль",           "url": "profile"}]
@@ -15,6 +16,10 @@ menu = [{"name": "Домашняя страница", "url": "home"},
 @app.route("/home")
 def home():
         return render_template('home.html', menu=menu) #все шаблоны по умолчанию берутся из templates/..
+
+@app.route("/games")
+def games():
+       return render_template('games.html', menu=menu)
 
 @app.route("/about")
 def about():

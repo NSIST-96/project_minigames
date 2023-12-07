@@ -63,6 +63,29 @@ ul.mainmenu li a:hover{
 }
 
 /*--- Home styles ---*/
+.home_top_news{
+    color: #2e1d00;
+    /* background-image: url(https://lh5.ggpht.com/nmnjUtcU3NJBTcwntDpcfIUDoMrss-xMQHVp4DOgFiuiwGYPO6MD_H_zqcjPpngxpnnW=h500); */
+    
+}
+
+/* .home_top_news img{
+    position: relative;
+    width: 90%;
+} */
+
+.home_top_news_info{
+    position: relative;
+    margin: 30px 0 0 50px;
+    background-image: linear-gradient(rgb(255, 208, 0), rgba(126, 126, 0, 0.719)),
+                      url(../img/news_background.jpg);
+    background-position: 100%;
+    background-position-x: left;
+    background-position-y: center;
+}
+/*--- end Home ---*/
+
+/*--- Games styles ---*/
 .home_top_info {
     color: #e49000;
 }
@@ -94,7 +117,7 @@ ul.mainmenu li a:hover{
     border: #e49000;
     border-radius: 7px;
 }
-/*--- end Home ---*/
+/*--- end Games ---*/
 
 /*--- flash styles ---*/
 .flash {padding: 10px;}
