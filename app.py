@@ -25,9 +25,9 @@ def games():
 def about():
         return render_template('about.html', menu=menu)
 
-@app.route("/cowclicker")
-def cowclicker():
-        return render_template('cowclicker.html', menu=menu)
+@app.route("/snake")
+def snake():
+        return render_template('snake.html', menu=menu)
 
 @app.route("/feedback", methods=["POST", "GET"])
 def feedback():
