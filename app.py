@@ -15,19 +15,19 @@ menu = [{"name": "Домашняя страница", "url": "home"},
 @app.route("/")
 @app.route("/home")
 def home():
-        return render_template('home.html', menu=menu) #все шаблоны по умолчанию берутся из templates/..
+        return render_template('/menu/home.html', menu=menu) #все шаблоны по умолчанию берутся из templates/..
 
 @app.route("/games")
 def games():
-       return render_template('games.html', menu=menu)
+       return render_template('/menu/games.html', menu=menu)
 
 @app.route("/about")
 def about():
-        return render_template('about.html', menu=menu)
+        return render_template('/menu/about.html', menu=menu)
 
 @app.route("/snake")
 def snake():
-        return render_template('snake.html', menu=menu)
+        return render_template('/games/snake.html', menu=menu)
 
 @app.route("/feedback", methods=["POST", "GET"])
 def feedback():
@@ -36,14 +36,14 @@ def feedback():
                         flash('Сообщение отправено', category='success')
                 else:
                         flash('Ошибка отправки', category='error')
-        return render_template('feedback.html',Title = "Обратная связь", menu=menu)
+        return render_template('/menu/feedback.html',Title = "Обратная связь", menu=menu)
 
 @app.route("/profile")
 def profile():
         if (True):
                 return render_template('login.html', menu=menu)
         else:
-                return render_template('profile.html', menu=menu)
+                return render_template('/menu/profile.html', menu=menu)
 
 @app.route('/login',methods=["POST", "GET"])
 def login():
