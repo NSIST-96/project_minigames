@@ -21,7 +21,7 @@ a:hover {
 ul.mainmenu {
     list-style: none;
     background: #3f4137;
-    box-shadow: /*inset*/0px 0px 10px 10px #3f4137;
+    box-shadow: /*inset*/0px 0px 10px 15px #3f4137;
     height: 60px;
     margin: 0;
     padding: 0;
@@ -76,46 +76,57 @@ ul.mainmenu li a:hover{
 
 .home_top_news_info{
     position: relative;
-    margin: 30px 0 0 50px;
+    margin: 0px 0 0 0px;
+    padding: 30px 30px;
     background-image: linear-gradient(rgb(255, 208, 0), rgba(126, 126, 0, 0.719)),
                       url(../img/news_background.jpg);
     background-position: 100%;
     background-position-x: left;
     background-position-y: center;
+    background-repeat: repeat-y;
 }
 /*--- end Home ---*/
 
 /*--- Games styles ---*/
-.home_top_info {
+.games_top_info {
     color: #e49000;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/games_list_background.jpg);
+    background-repeat: repeat;
 }
 
-.home_games{
-    background-color: #636363d0;
-    position: relative;
+.games_list{
     display: flex;
-    flex-direction: row;
-    align-content: flex-start;
+    flex-wrap: wrap;
+    position: relative;
 }
 
-.home_games img{
-    width: 100px;
-}
-
-.home_games_card{
-    margin: 5px;
+.games_card{
+    display: flex;
+    margin: 5px 0 5px 10px;
     padding: 5px;
     border-radius: 5px;
-    background-color: #636363;
+    background-color: rgba(95, 95, 95, 0.164);
     flex-direction: row;
-    min-width: 15%;
+    min-width: 20%;
+    max-width: 47%;
 }
 
-.home_games_card button{
+.games_card img{
+    width: 150px;
+    margin: 5px;
+}
+
+.play_button{
     padding: 5px, 10px;
     position: inherit;
     border: #e49000;
     border-radius: 7px;
+}
+
+.play_button svg{
+    width: 20px;
 }
 /*--- end Games ---*/
 
@@ -140,7 +151,6 @@ ul.mainmenu li a:hover{
     font-size: 10pt;
     text-align: center;
     color: #fdc073;
-    margin-top: 100px;
     padding: 10px 0px 30px 0px;
 }
 
