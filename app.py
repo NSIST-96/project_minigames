@@ -1,13 +1,16 @@
 from flask import Flask, render_template, request, flash, session, redirect, url_for, abort #Импортируем фласк и рендер шаблонов
+from flask_socketio import SocketIO, send
 import database.database
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'пф'
+socketio = SocketIO(app, cors_allowed_origins="*")
 
 menu = [{"name": "Домашняя страница", "url": "home"},
         {"name": "Игры",              "url": "games"},
         {"name": "О нас",             "url": "about"},
         {"name": "Отзыв",             "url": "feedback"},
+        {"name": "Чат",               "url": "chat"},
         {"name": "Профиль",           "url": "profile"}]
 
 
@@ -57,6 +60,16 @@ def login():
 @app.errorhandler(404)
 def pageNotFount(error):
         return render_template('page404.html', title = "Старинца не найдена", menu=menu)
+
+@app.route('/chat')
+def chat():
+       return render_template('/menu/chat.html', menu=menu)
+
+@socketio.on("message")
+def handle_message(message):
+       print(f"Receaved message: {message}")
+       if message != "User connected!":
+              send(message, broadcast = True)
 
 if __name__ == "__main__":
         app.run(debug=True)
