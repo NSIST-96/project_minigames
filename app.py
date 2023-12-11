@@ -61,15 +61,15 @@ def login():
 def pageNotFount(error):
         return render_template('page404.html', title = "Старинца не найдена", menu=menu)
 
+@socketio.on('message')
+def handle_message(message):
+       print("Received message: " + message)
+       if message != "User connected!":
+              send(message, broadcast = True)
+
 @app.route('/chat')
 def chat():
        return render_template('/menu/chat.html', menu=menu)
-
-@socketio.on("message")
-def handle_message(message):
-       print(f"Receaved message: {message}")
-       if message != "User connected!":
-              send(message, broadcast = True)
 
 if __name__ == "__main__":
         app.run(debug=True)
