@@ -78,12 +78,14 @@ ul.mainmenu li a:hover{
     position: relative;
     margin: 0px 0 0 0px;
     padding: 30px 30px;
-    background-image: linear-gradient(rgb(255, 208, 0), rgba(126, 126, 0, 0.719)),
+    background-image: linear-gradient(rgb(255, 208, 0), rgba(126, 126, 0, 0.719)), 
                       url(../img/news_background.jpg);
     background-position: 100%;
     background-position-x: left;
     background-position-y: center;
     background-repeat: repeat-y;
+
+    min-height: 400px;
 }
 /*--- end Home ---*/
 
@@ -94,6 +96,8 @@ ul.mainmenu li a:hover{
     padding: 0;
     background-image: url(../img/games_list_background.jpg);
     background-repeat: repeat;
+
+    height: 500px;
 }
 
 .games_list{
@@ -143,6 +147,14 @@ ul.mainmenu li a:hover{
     background: #ff9c9c;
 }
 /*--- end flash ---*/
+
+/*--- Chat styles ---*/
+.chat_messages{
+    min-height: 50%;
+    max-height: 50%;
+    text-align: center;
+}
+/*--- end Chat ---*/
 
 /*--- Footer styles ---*/
 .footer_content{
