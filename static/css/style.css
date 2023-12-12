@@ -1,3 +1,4 @@
+/* base styles */
 html, body{
     font-family: 'Arial';
     margin: 0;
@@ -17,7 +18,9 @@ a:hover {
 }
 
 .clear {clear: both;}
+/* end base styles */
 
+/* mainmenu styles */
 ul.mainmenu {
     list-style: none;
     background: #3f4137;
@@ -47,6 +50,7 @@ ul.mainmenu li a {
 ul.mainmenu li a:hover{
     color: #fdb83d;
 }
+/* end mainmenu styles */
 
 .content {
     margin: 10px;
@@ -62,78 +66,6 @@ ul.mainmenu li a:hover{
     font-size: 16px;
 }
 
-/*--- Home styles ---*/
-.home_top_news{
-    color: #2e1d00;
-    /* background-image: url(https://lh5.ggpht.com/nmnjUtcU3NJBTcwntDpcfIUDoMrss-xMQHVp4DOgFiuiwGYPO6MD_H_zqcjPpngxpnnW=h500); */
-    
-}
-
-/* .home_top_news img{
-    position: relative;
-    width: 90%;
-} */
-
-.home_top_news_info{
-    position: relative;
-    margin: 0px 0 0 0px;
-    padding: 30px 30px;
-    background-image: linear-gradient(rgb(255, 208, 0), rgba(126, 126, 0, 0.719)), 
-                      url(../img/news_background.jpg);
-    background-position: 100%;
-    background-position-x: left;
-    background-position-y: center;
-    background-repeat: repeat-y;
-
-    min-height: 400px;
-}
-/*--- end Home ---*/
-
-/*--- Games styles ---*/
-.games_top_info {
-    color: #e49000;
-    margin: 0;
-    padding: 0;
-    background-image: url(../img/games_list_background.jpg);
-    background-repeat: repeat;
-
-    height: 500px;
-}
-
-.games_list{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-}
-
-.games_card{
-    display: flex;
-    margin: 5px 0 5px 10px;
-    padding: 5px;
-    border-radius: 5px;
-    background-color: rgba(95, 95, 95, 0.164);
-    flex-direction: row;
-    min-width: 20%;
-    max-width: 47%;
-}
-
-.games_card img{
-    width: 150px;
-    margin: 5px;
-}
-
-.play_button{
-    padding: 5px, 10px;
-    position: inherit;
-    border: #e49000;
-    border-radius: 7px;
-}
-
-.play_button svg{
-    width: 20px;
-}
-/*--- end Games ---*/
-
 /*--- flash styles ---*/
 .flash {padding: 10px;}
 
@@ -147,14 +79,6 @@ ul.mainmenu li a:hover{
     background: #ff9c9c;
 }
 /*--- end flash ---*/
-
-/*--- Chat styles ---*/
-.chat_messages{
-    min-height: 50%;
-    max-height: 50%;
-    text-align: center;
-}
-/*--- end Chat ---*/
 
 /*--- Footer styles ---*/
 .footer_content{

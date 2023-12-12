@@ -1,0 +1,42 @@
+.games_top_info {
+    color: #e49000;
+    margin: 0;
+    padding: 0;
+    background-image: url(../img/games_list_background.jpg);
+    background-repeat: repeat;
+
+    height: 500px;
+}
+
+.games_list{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.games_card{
+    display: flex;
+    margin: 5px 0 5px 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(95, 95, 95, 0.164);
+    flex-direction: row;
+    min-width: 20%;
+    max-width: 47%;
+}
+
+.games_card img{
+    width: 150px;
+    margin: 5px;
+}
+
+.play_button{
+    padding: 5px, 10px;
+    position: inherit;
+    border: #e49000;
+    border-radius: 7px;
+}
+
+.play_button svg{
+    width: 20px;
+}
