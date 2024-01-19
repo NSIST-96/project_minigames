@@ -1,0 +1,16 @@
+.about_info{
+    margin: 30;
+    padding: 30;
+    background-image: url(../../img/aboutUsBack.png);
+    min-height: 600px;
+}
+
+.about_info_title{
+    color:#e49000;
+    text-align: center;
+    font-size: 25px;
+}
+
+.about_info_text{
+    color:#e49000;
+}
