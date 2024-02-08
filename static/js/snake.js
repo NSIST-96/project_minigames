@@ -58,9 +58,9 @@ function drawSnake() {
 
 	snake.tails.forEach( function(el, index){
 		if (index == 0) {
-			context.fillStyle = "#FA0556";
+			context.fillStyle = "#00FF00";
 		} else {
-			context.fillStyle = "#A00034";
+			context.fillStyle = "#22AA00";
 		}
 		context.fillRect( el.x, el.y, config.sizeCell, config.sizeCell );
 
@@ -110,7 +110,7 @@ function refreshGame() {
 
 function drawBerry() {
 	context.beginPath();
-	context.fillStyle = "#A00034";
+	context.fillStyle = "#FF1100";
 	context.arc( berry.x + (config.sizeCell / 2 ), berry.y + (config.sizeCell / 2 ), config.sizeBerry, 0, 2 * Math.PI );
 	context.fill();
 }
