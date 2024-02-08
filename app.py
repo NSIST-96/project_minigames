@@ -14,7 +14,7 @@ menu = [{"name": "Домашняя страница", "url": "home"},
         {"name": "Профиль",           "url": "profile"}]
 
 
-
+### - TopMenu - ###
 @app.route("/")
 @app.route("/home")
 def home():
@@ -24,13 +24,10 @@ def home():
 def games():
        return render_template('/menu/games.html', menu=menu)
 
+
 @app.route("/about")
 def about():
         return render_template('/menu/about.html', menu=menu)
-
-@app.route("/snake")
-def snake():
-        return render_template('/games/snake.html', menu=menu)
 
 @app.route("/feedback", methods=["POST", "GET"])
 def feedback():
@@ -40,6 +37,25 @@ def feedback():
                 else:
                         flash('Ошибка отправки', category='error')
         return render_template('/menu/feedback.html',Title = "Обратная связь", menu=menu)
+### - End TopMenu - ###
+
+### - Games - ###
+@app.route("/snake")
+def snake():
+        return render_template('/games/snake.html', menu=menu)
+
+@app.route("/tetris")
+def tetris():
+        return render_template('/games/tetris.html', menu=menu)
+
+@app.route("/clicker")
+def clicker():
+        return render_template('/games/clicker.html', menu=menu)
+
+@app.route("/labirint")
+def labirint():
+        return render_template('/games/labirint.html', menu=menu)
+### - End Games - ###
 
 @app.route("/profile")
 def profile():

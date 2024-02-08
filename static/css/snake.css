@@ -1,12 +1,4 @@
-.snake_game{
-    padding: 50px;
-    margin: 0;
-    box-sizing: border-box;
-    background: #ddd;
-}
-
-canvas{
-    background-color: black;
-    margin: 0 auto;
+canvas {
     display: block;
-}
+    margin: auto;
+  }

@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 {% block head %}
 <link type="text/css" href="../../static/css/snake.css" rel="stylesheet"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
 {% endblock head %}
 {% block content %}
 {{super()}}
-,<canvas id="mc" width="1100" height="500"></canvas>
 <div class="snake_game">
+    <canvas id="game" width="608" height="608"></canvas>
     <script src="../../static/js/snake.js"></script>
 </div>
 {% endblock %}
