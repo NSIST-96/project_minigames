@@ -13,12 +13,12 @@
     position: relative;
     margin: 0px 0 0 0px;
     padding: 30px 30px;
-    background-image: linear-gradient(rgb(255, 208, 0), rgba(126, 126, 0, 0.719)), 
+    background-image: linear-gradient(rgb(255, 208, 0, 0.5), rgba(126, 126, 0, 0.719)), 
                       url(../../img/news_background.jpg);
     background-position: 100%;
     background-position-x: left;
     background-position-y: center;
-    background-repeat: repeat-y;
+    background-size: cover;
 
     min-height: 400px;
 }
